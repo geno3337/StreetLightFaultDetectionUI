@@ -1,10 +1,15 @@
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import ResponsiveDrawer from './components/SideBar/sideBar';
+import AdminRoute from './routes/AdminRoute';
+import LocationMap from './components/locationMap/location';
+import Mycomponent from './components/locationMap/mycomponent';
+import Map from './components/locationMap/map';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +22,16 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      {/* <ResponsiveDrawer/> */}
+      {/* <ThemeProvider theme={theme}> */}
+        <BrowserRouter>
+          <AdminRoute/>
+        </BrowserRouter>
+        {/* <LocationMap/> */}
+        {/* <Mycomponent/> */}
+        {/* <Map/> */}
+      {/* </ThemeProvider> */}
     </div>
   );
 }
